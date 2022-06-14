@@ -19,7 +19,8 @@
     }
 
     &__item {
-        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     &__item + &__item {
@@ -27,8 +28,9 @@
     }
 
     &__link {
-        display: block;
+        display: flex;
         height: 100%;
+        align-items: center;
     }
 }
 

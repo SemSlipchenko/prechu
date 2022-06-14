@@ -88,14 +88,16 @@ body {
   height: 100%;
 }
 .header__item {
-  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .header__item + .header__item {
   margin-left: 27px;
 }
 .header__link {
-  display: block;
+  display: flex;
   height: 100%;
+  align-items: center;
 }
 
 .hero {
