@@ -10,3 +10,23 @@ body {
     padding-right: 15px;
     margin: 0 auto;
 }
+
+.btn {
+    width: 172px;
+    height: 41px;
+    border-radius: 5px;
+    background-color: var(--secondary-text-color);
+    font-family: 'Myriad Pro';
+    font-size: 22px;
+    line-height: 2;
+    color: var(--hero-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &__icon {
+        width: 32px;
+        fill: var(--hero-text-color);
+        height: 32px;
+    }
+}

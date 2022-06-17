@@ -10,7 +10,12 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__logo">Prechu</div>
+            <div class="header__logo-wrap">
+                <svg class="header__logo-icon">
+                    <use href="./img/icon.svg#icon-quotes"></use>
+                </svg>
+                <span class="header__logo-text">Prechu</span>
+            </div>
             <ul class="header__list">
                 <li class="header__item"><a class="header__link" href="#">Home</a></li>
                 <li class="header__item"><a class="header__link" href="#">Products</a></li>
@@ -27,15 +32,48 @@
                 </div>
                 <div class="hero__content">
                     <h1 class="hero__title">Lorem Ipsum is simply</h1>
-                    <p>dummy text of the
+                    <p class="hero__text">dummy text of the
                     printing & typesetting</p>
-                    <button type="button">Sign up now</button>
+                    <button class="hero__btn btn" type="button">
+                        <svg class="btn__icon">
+                            <use href="./img/icon.svg#icon-circle"></use>
+                        </svg>
+                        Sign up now
+                    </button>
                 </div>
             </div>
         </section>
         <section class="popular">
             <div class="container">
-            
+                <ul class="popular__list">
+                    <li class="popular__item">
+                        <div class="item__img">
+                            <svg class="item__icon">
+                                <use href="./img/icon.svg#icon-pencil"></use>
+                            </svg>
+                        </div>
+                        <h2 class="item__title">Contrary to popular</h2>
+                        <p class="item__text">Lorem Ipsum is not simply random text. It has roots in a piece</p>
+                    </li>
+                    <li class="popular__item">
+                        <div class="item__img">
+                            <svg class="item__icon">
+                                <use href="./img/icon.svg#icon-display"></use>
+                            </svg>
+                        </div>
+                        <h2 class="item__title">Contrary to popular</h2>
+                        <p class="item__text">Lorem Ipsum is not simply random text. It has roots in a piece</p>
+                    </li>
+                    <li class="popular__item">
+                        <div class="item__img">
+                            <svg class="item__icon">
+                                <use href="./img/icon.svg#icon-cart"></use>
+                            </svg>
+                        </div>
+                        <h2 class="item__title">Contrary to popular</h2>
+                        <p class="item__text">Lorem Ipsum is not simply random text. It has roots in a piece</p>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="shopping">

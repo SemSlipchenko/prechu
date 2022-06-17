@@ -30,6 +30,10 @@ a {
     text-decoration: none;
 }
 
+a:focus, button:focus {
+    outline: none;
+}
+
 img {
     display: block;
     height: auto;

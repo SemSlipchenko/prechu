@@ -1,0 +1,30 @@
+.popular {
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        max-width: 250px;
+
+        & .item__img {
+            border-radius: 50%;
+            background-color: var(--secondary-text-color);
+            width: 186px;
+            height: 186px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & .item__icon {
+            width: 98px;
+            height: 98px;
+            fill: var(--hero-text-color);
+        }
+    }
+}
