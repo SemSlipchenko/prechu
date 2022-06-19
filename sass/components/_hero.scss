@@ -8,32 +8,52 @@
 
     & .container {
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
         align-items: center;
+
+        @media (min-width: 768px) {
+                flex-direction: row;
+                justify-content: space-around;
+            }
     }
 
     &__img {
-        width: 345px;
-        height: 436px;
+        max-width: 345px;
+        max-height: 436px;
     }
 
     &__content {
         max-width: 395px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
     }
 
     &__title {
-        font-size: 42px;
+        font-size: 38px;
         line-height: 1.06;
         color: var(--hero-text-color);
         margin-bottom: 23px;
+
+        @media (min-width: 768px) {
+            font-size: 42px;
+        }
     }
 
     &__text {
         max-width: 240px;
-        font-size: 26px;
+        font-size: 20px;
         line-height: 1.06;
         color: var(--hero-text-color);
         margin-bottom: 30px;
+
+        @media (min-width: 768px) {
+            font-size: 26px;
+        }
     }
 
     &__btn {

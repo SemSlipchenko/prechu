@@ -7,11 +7,22 @@
         line-height: 1.05;
         color: var(--title-color);
         margin-bottom: 20px;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            text-align: left;
+        }
     }
 
     &__wrap {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     &__cart {
@@ -26,6 +37,10 @@
         font-size: 26px;
         line-height: 1.69;
         color: var(--title-color);
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: left;
+        }
     }
 
     &__text {

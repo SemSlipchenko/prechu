@@ -137,12 +137,22 @@ body {
   display: flex;
   height: 100%;
 }
+@media (max-width: 767px) {
+  .header__list {
+    display: none;
+  }
+}
 .header__item {
   display: flex;
   align-items: center;
 }
 .header__item + .header__item {
   margin-left: 27px;
+}
+@media (max-width: 767px) {
+  .header__item + .header__item {
+    margin-left: 0;
+  }
 }
 .header__link {
   display: flex;
@@ -166,28 +176,52 @@ body {
 }
 .hero .container {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .hero .container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .hero__img {
-  width: 345px;
-  height: 436px;
+  max-width: 345px;
+  max-height: 436px;
 }
 .hero__content {
   max-width: 395px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .hero__content {
+    display: block;
+  }
 }
 .hero__title {
-  font-size: 42px;
+  font-size: 38px;
   line-height: 1.06;
   color: var(--hero-text-color);
   margin-bottom: 23px;
 }
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 42px;
+  }
+}
 .hero__text {
   max-width: 240px;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 1.06;
   color: var(--hero-text-color);
   margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .hero__text {
+    font-size: 26px;
+  }
 }
 .hero__btn:hover, .hero__btn:focus {
   transform: scale(1.1);
@@ -200,7 +234,22 @@ body {
 }
 .popular__list {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .popular__list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.popular__item + .popular__item {
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .popular__item + .popular__item {
+    margin-top: 0;
+  }
 }
 .popular__item {
   max-width: 250px;
@@ -240,10 +289,23 @@ body {
   line-height: 1.05;
   color: var(--title-color);
   margin-bottom: 20px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .shopping__title {
+    text-align: left;
+  }
 }
 .shopping__wrap {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .shopping__wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .shopping__cart {
   max-width: 370px;
@@ -255,6 +317,12 @@ body {
   font-size: 26px;
   line-height: 1.69;
   color: var(--title-color);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .shopping__subtitle {
+    text-align: left;
+  }
 }
 .shopping__text {
   font-size: 15px;
@@ -275,4 +343,70 @@ body {
   font-size: 15px;
   line-height: 2.4;
   color: var(--main-text-color);
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+.menu-toggle:hover, .menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-image: url(/img/hero-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--secondary-text-color);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 26px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.mobile-menu__item + .mobile-menu__item {
+  margin-top: 30px;
+}
+.mobile-menu__link {
+  display: block;
+  height: 100%;
+  color: var(--hero-text-color);
+}
+.mobile-menu__link:hover, .mobile-menu__link:focus {
+  color: var(--secondary-text-color);
 }/*# sourceMappingURL=main.css.map */

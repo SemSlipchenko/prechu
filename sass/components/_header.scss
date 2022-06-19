@@ -33,6 +33,10 @@
     &__list {
         display: flex;
         height: 100%;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
     }
 
     &__item {
@@ -42,6 +46,10 @@
 
     &__item + &__item {
         margin-left: 27px;
+
+        @media (max-width: 767px) {
+                margin-left: 0;
+            }
     }
 
     &__link {

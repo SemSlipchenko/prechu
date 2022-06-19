@@ -1,0 +1,73 @@
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+
+    @media (min-width: 768px) {
+            display: none;
+    }
+
+    &:hover, &:focus {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 32px;
+    background-image: url(/img/hero-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--secondary-text-color);
+    z-index: 999;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    & .menu-toggle {
+        position: absolute;
+        top: 26px;
+        right: 16px;
+        color: #fff;
+    }
+}
+
+.mobile-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &__item + &__item {
+        margin-top: 30px;
+    }
+
+    &__link {
+        display: block;
+        height: 100%;
+        color: var(--hero-text-color);
+
+        &:hover,
+        &:focus {
+            color: var(--secondary-text-color);
+        }
+    }
+}
