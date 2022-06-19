@@ -1,0 +1,36 @@
+.shopping {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__title {
+        font-size: 42px;
+        line-height: 1.05;
+        color: var(--title-color);
+        margin-bottom: 20px;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__cart {
+        max-width: 370px;
+    }
+
+    &__description {
+        max-width: 450px;
+    }
+
+    &__subtitle {
+        font-size: 26px;
+        line-height: 1.69;
+        color: var(--title-color);
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 2.4;
+        color: var(--main-text-color);
+    }
+}

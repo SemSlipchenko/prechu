@@ -10,21 +10,34 @@
 
     &__item {
         max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         & .item__img {
             border-radius: 50%;
-            background-color: var(--secondary-text-color);
             width: 186px;
             height: 186px;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 20px;
         }
 
         & .item__icon {
             width: 98px;
             height: 98px;
             fill: var(--hero-text-color);
+        }
+
+        & .item__title {
+            margin-bottom: 10px;
+            color: var(--secondary-text-color);
+        }
+
+        & .item__text {
+            text-align: center;
+            color: var(--main-text-color);
         }
     }
 }
